@@ -1,0 +1,13 @@
+Wed Aug 30 2023 10:32:38 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+Wed Aug 30 2023 10:33:39 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized

@@ -1,0 +1,132 @@
+Mon Sep 04 2023 13:22:32 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:23:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:24:42 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:33:46 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:34:29 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:34:59 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:37:17 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:37:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:38:41 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:40:16 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:40:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:51:1 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:51:19 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "endTime"
+    ],
+    "message": "End time is required"
+  }
+]
+Mon Sep 04 2023 13:51:28 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:53:6 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:53:20 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:53:21 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:53:22 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:53:23 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:53:24 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:53:25 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:54:25 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:55:17 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:57:0 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.
+Mon Sep 04 2023 13:57:58 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseClassSchedule' does not match any query.

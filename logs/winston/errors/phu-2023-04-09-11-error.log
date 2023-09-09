@@ -1,0 +1,45 @@
+Mon Sep 04 2023 11:10:41 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseSection' does not match any query.
+Mon Sep 04 2023 11:12:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseSection' does not match any query.
+Mon Sep 04 2023 11:15:37 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseSection' does not match any query.
+Mon Sep 04 2023 11:16:47 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseSection' does not match any query.
+Mon Sep 04 2023 11:18:9 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseSection' does not match any query.
+Mon Sep 04 2023 11:18:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseSection' does not match any query.
+Mon Sep 04 2023 11:19:49 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseSection' does not match any query.
+Mon Sep 04 2023 11:23:18 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseSection' does not match any query.
+Mon Sep 04 2023 11:27:53 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+
+Operation 'createOne' for model 'OfferedCourseSection' does not match any query.

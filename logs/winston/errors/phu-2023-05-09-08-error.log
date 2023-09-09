@@ -1,0 +1,164 @@
+Tue Sep 05 2023 8:2:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room is already booked
+Tue Sep 05 2023 8:2:53 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room is already booked
+Tue Sep 05 2023 8:16:28 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room is already booked
+Tue Sep 05 2023 8:16:58 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Faculty is already booked on this day/time.
+Tue Sep 05 2023 8:36:37 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.findMany()` invocation:
+
+{
+  include: {
+    Faculty: true,
+    SemesterRegistration: true,
+    Room: true,
+    OfferedCourseSection: true
+  },
+  where: {
+    AND: [
+      {
+        OR: [
+          {
+            dayOfWeek: {
+              contains: "saturday",
+              mode: "insensitive"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.
+Tue Sep 05 2023 8:37:7 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.findMany()` invocation:
+
+{
+  include: {
+    Faculty: true,
+    SemesterRegistration: true,
+    Room: true,
+    OfferedCourseSection: true
+  },
+  where: {
+    AND: [
+      {
+        OR: [
+          {
+            dayOfWeek: {
+              contains: "SUNDAY",
+              mode: "insensitive"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.
+Tue Sep 05 2023 8:37:27 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.findMany()` invocation:
+
+{
+  include: {
+    Faculty: true,
+    SemesterRegistration: true,
+    Room: true,
+    OfferedCourseSection: true
+  },
+  where: {
+    AND: [
+      {
+        OR: [
+          {
+            dayOfWeek: {
+              contains: "dayOfWeek",
+              mode: "insensitive"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.
+Tue Sep 05 2023 8:37:55 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.findMany()` invocation:
+
+{
+  include: {
+    Faculty: true,
+    SemesterRegistration: true,
+    Room: true,
+    OfferedCourseSection: true
+  },
+  where: {
+    AND: [
+      {
+        OR: [
+          {
+            dayOfWeek: {
+              contains: "SUNDAY",
+              mode: "insensitive"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.
+Tue Sep 05 2023 8:38:10 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.findMany()` invocation:
+
+{
+  include: {
+    Faculty: true,
+    SemesterRegistration: true,
+    Room: true,
+    OfferedCourseSection: true
+  },
+  where: {
+    AND: [
+      {
+        OR: [
+          {
+            dayOfWeek: {
+              contains: "SUNDAY",
+              mode: "insensitive"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.

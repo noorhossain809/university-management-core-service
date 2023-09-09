@@ -1,0 +1,28 @@
+Tue Sep 05 2023 11:28:54 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.student.findFirst()` invocation:
+
+{
+  where: {
+    studentId: {
+      userId: "270100001",
+      ~~~~~~
+      role: "student",
+      iat: 1693890871,
+      exp: 1693977271,
+?     equals?: String | StringFieldRefInput,
+?     in?: String[] | ListStringFieldRefInput,
+?     notIn?: String[] | ListStringFieldRefInput,
+?     lt?: String | StringFieldRefInput,
+?     lte?: String | StringFieldRefInput,
+?     gt?: String | StringFieldRefInput,
+?     gte?: String | StringFieldRefInput,
+?     contains?: String | StringFieldRefInput,
+?     startsWith?: String | StringFieldRefInput,
+?     endsWith?: String | StringFieldRefInput,
+?     mode?: QueryMode,
+?     not?: String | NestedStringFilter
+    }
+  }
+}
+
+Unknown argument `userId`. Available options are listed in green.

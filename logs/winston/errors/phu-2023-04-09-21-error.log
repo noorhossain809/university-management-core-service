@@ -1,0 +1,36 @@
+Mon Sep 04 2023 21:45:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.findMany()` invocation:
+
+{
+  where: {
+    dayOfWeek: "SUNDAY",
+    room: {
+    ~~~~
+      id: "3246f79e-8565-46a9-ad80-3c7954a86ce3"
+    },
+?   AND?: OfferedCourseClassScheduleWhereInput | OfferedCourseClassScheduleWhereInput[],
+?   OR?: OfferedCourseClassScheduleWhereInput[],
+?   NOT?: OfferedCourseClassScheduleWhereInput | OfferedCourseClassScheduleWhereInput[],
+?   id?: StringFilter | String,
+?   startTime?: StringFilter | String,
+?   endTime?: StringFilter | String,
+?   createdAt?: DateTimeFilter | DateTime,
+?   updatedAt?: DateTimeFilter | DateTime,
+?   offeredCourseSectionId?: StringFilter | String,
+?   semesterRegistrationId?: StringFilter | String,
+?   roomId?: StringFilter | String,
+?   facultyId?: StringFilter | String,
+?   OfferedCourseSection?: OfferedCourseSectionRelationFilter | OfferedCourseSectionWhereInput,
+?   SemesterRegistration?: SemesterRegistrationRelationFilter | SemesterRegistrationWhereInput,
+?   Room?: RoomRelationFilter | RoomWhereInput,
+?   Faculty?: FacultyRelationFilter | FacultyWhereInput
+  }
+}
+
+Unknown argument `room`. Did you mean `Room`? Available options are listed in green.
+Mon Sep 04 2023 21:50:36 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room is already booked
+Mon Sep 04 2023 21:51:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room is already booked
+Mon Sep 04 2023 21:51:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room is already booked
+Mon Sep 04 2023 21:52:7 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room is already booked
+Mon Sep 04 2023 21:52:22 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room is already booked
+Mon Sep 04 2023 21:52:47 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room is already booked

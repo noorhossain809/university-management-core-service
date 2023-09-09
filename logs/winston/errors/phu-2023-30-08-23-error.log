@@ -1,0 +1,23 @@
+Wed Aug 30 2023 23:53:28 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "course-2",
+    code: "CSE02",
+    credits: 4,
+    prerequisiteCourse: [
+    ~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "d74a47ff-a0e9-4a10-a432-5dc7154adaf7"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   Prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   PrerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPreRequisiteInput
+  }
+}
+
+Unknown argument `prerequisiteCourse`. Available options are listed in green.

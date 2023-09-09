@@ -1,0 +1,93 @@
+Sat Sep 02 2023 12:20:32 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.semesterRegistration.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found.
+Sat Sep 02 2023 12:25:5 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Data not found
+Sat Sep 02 2023 12:30:24 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Can only move from UPCOMING to ONGOING
+Sat Sep 02 2023 12:31:20 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Can only move from UPCOMING to ONGOING
+Sat Sep 02 2023 12:49:20 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Sat Sep 02 2023 12:56:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "endDate"
+    ],
+    "message": "End date is required"
+  }
+]
+Sat Sep 02 2023 12:57:4 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ There is an already UPCOMING registration
+Sat Sep 02 2023 12:57:42 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ There is an already UPCOMING registration
+Sat Sep 02 2023 12:58:20 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Sat Sep 02 2023 12:58:30 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.semesterRegistration.update()` invocation:
+
+{
+  where: {
+    id: "c3000ba3-4f10-4105-8872-edae11b1dade"
+  },
+  data: {
+    statuss: "ENDED",
+    ~~~~~~~
+    minCredit: 15,
+?   id?: String | StringFieldUpdateOperationsInput,
+?   startDate?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   endDate?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   status?: SemesterRegistrationStatus | NullableEnumSemesterRegistrationStatusFieldUpdateOperationsInput | Null,
+?   maxCredit?: Int | IntFieldUpdateOperationsInput,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   academicSemester?: AcademicSemesterUpdateOneRequiredWithoutSemesterRegistrationNestedInput
+  }
+}
+
+Unknown argument `statuss`. Did you mean `status`? Available options are listed in green.
+Sat Sep 02 2023 12:59:23 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.semesterRegistration.update()` invocation:
+
+{
+  where: {
+    id: "bbcc42a5-f868-4933-a1cc-64f05d5003db"
+  },
+  data: {
+    statuss: "ENDED",
+    ~~~~~~~
+    minCredit: 15,
+?   id?: String | StringFieldUpdateOperationsInput,
+?   startDate?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   endDate?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   status?: SemesterRegistrationStatus | NullableEnumSemesterRegistrationStatusFieldUpdateOperationsInput | Null,
+?   maxCredit?: Int | IntFieldUpdateOperationsInput,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   academicSemester?: AcademicSemesterUpdateOneRequiredWithoutSemesterRegistrationNestedInput
+  }
+}
+
+Unknown argument `statuss`. Did you mean `status`? Available options are listed in green.
+Sat Sep 02 2023 12:59:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.semesterRegistration.update()` invocation:
+
+{
+  where: {
+    id: "bbcc42a5-f868-4933-a1cc-64f05d5003db"
+  },
+  data: {
+    statuss: "ONGOING",
+    ~~~~~~~
+?   id?: String | StringFieldUpdateOperationsInput,
+?   startDate?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   endDate?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   status?: SemesterRegistrationStatus | NullableEnumSemesterRegistrationStatusFieldUpdateOperationsInput | Null,
+?   minCredit?: Int | IntFieldUpdateOperationsInput,
+?   maxCredit?: Int | IntFieldUpdateOperationsInput,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   academicSemester?: AcademicSemesterUpdateOneRequiredWithoutSemesterRegistrationNestedInput
+  }
+}
+
+Unknown argument `statuss`. Did you mean `status`? Available options are listed in green.

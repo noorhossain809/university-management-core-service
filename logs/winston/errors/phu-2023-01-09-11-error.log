@@ -1,0 +1,10 @@
+Fri Sep 01 2023 11:20:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.courseToPrerequisite.create()` invocation:
+
+
+Unique constraint failed on the fields: (`courseId`,`preRequisiteId`)
+Fri Sep 01 2023 11:22:32 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.courseToPrerequisite.create()` invocation:
+
+
+Unique constraint failed on the fields: (`courseId`,`preRequisiteId`)

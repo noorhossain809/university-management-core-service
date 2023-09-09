@@ -1,0 +1,10 @@
+Tue Sep 05 2023 14:23:4 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.studentSemesterRegistration.create()` invocation:
+
+
+Operation 'createOne' for model 'StudentSemesterRegistration' does not match any query.
+Tue Sep 05 2023 14:26:55 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.studentSemesterRegistration.create()` invocation:
+
+
+Operation 'createOne' for model 'StudentSemesterRegistration' does not match any query.

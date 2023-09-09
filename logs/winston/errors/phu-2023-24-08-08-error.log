@@ -1,0 +1,11 @@
+Thu Aug 24 2023 8:53:19 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicSemester.findMany()` invocation in
+C:\web-development\Next-Level\university-management-core-service-starter\src\app\modules\academicSemester\academicSemester.service.ts:26:48
+
+  23 const { searchTerm, ...filtersData } = filters;
+  24 const { page, limit, skip, sortBy, sortOrder } =
+  25   paginationHelpers.calculatePagination(options);
+→ 26 const result = await prisma.academicSemester.findMany(
+Can't reach database server at `localhost`:`5432`
+
+Please make sure your database server is running at `localhost`:`5432`.
