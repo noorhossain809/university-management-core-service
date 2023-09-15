@@ -35,6 +35,13 @@ const insertIntoDB = async (data: ICourseOffer): Promise<OfferdCourse[]> => {
   return result;
 };
 
+const getAllFromDB = async () => {
+  const result = await prisma.offerdCourse.findMany();
+
+  return result;
+};
+
 export const OfferedCourseService = {
-  insertIntoDB
+  insertIntoDB,
+  getAllFromDB
 };

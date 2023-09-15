@@ -71,18 +71,28 @@ const getAllAcademicSemester = async (
   };
 };
 
-
-const singleAcademicSemester = async(id: string) : Promise<AcademicSemester | null> => {
+const singleAcademicSemester = async (
+  id: string
+): Promise<AcademicSemester | null> => {
   const result = await prisma.academicSemester.findUnique({
     where: {
       id
     }
-  })
+  });
   return result;
-}
+};
+const deleteAcademicSemester = async (id: string) => {
+  const result = await prisma.academicSemester.delete({
+    where: {
+      id
+    }
+  });
+  return result;
+};
 
 export const AcademicSemesterService = {
   createAcademicSemester,
   getAllAcademicSemester,
-  singleAcademicSemester
+  singleAcademicSemester,
+  deleteAcademicSemester
 };

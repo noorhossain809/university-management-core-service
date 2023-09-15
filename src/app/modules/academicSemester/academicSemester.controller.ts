@@ -65,9 +65,26 @@ const singleAcademicSemester = async (req: Request, res: Response) => {
     res.send(error);
   }
 };
+const deleteAcademicSemester = async (req: Request, res: Response) => {
+  try {
+    const result = await AcademicSemesterService.deleteAcademicSemester(
+      req.params.id
+    );
+
+    sendResponse<AcademicSemester>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'academic semester deleted successfully!!!',
+      data: result
+    });
+  } catch (error) {
+    res.send(error);
+  }
+};
 
 export const AcademicSemesterController = {
   createAcademicSemester,
   getAllAcademicSemester,
-  singleAcademicSemester
+  singleAcademicSemester,
+  deleteAcademicSemester
 };

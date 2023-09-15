@@ -1,0 +1,5 @@
+Tue Sep 12 2023 12:44:37 } [PH] error: 
+Invalid `prisma.studentEnrolledCourse.create()` invocation:
+
+
+Operation 'createOne' for model 'StudentEnrolledCourse' does not match any query.

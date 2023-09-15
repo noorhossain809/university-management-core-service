@@ -8,6 +8,11 @@ import { StudentsController } from './students.controller';
 const router = express.Router();
 
 router.get('/', StudentsController.getAllStudents);
+router.get(
+  '/my-courses',
+  auth(ENUM_USER_ROLE.STUDENT),
+  StudentsController.myCourses
+);
 router.get('/:id', StudentsController.singleStudents);
 router.post('/', StudentsController.createStudents);
 router.patch(

@@ -1,0 +1,15 @@
+Wed Sep 13 2023 21:25:41 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.studentAcademicInfo.create()` invocation:
+
+
+Operation 'createOne' for model 'StudentAcademicInfo' does not match any query.
+Wed Sep 13 2023 21:27:6 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.studentAcademicInfo.create()` invocation:
+
+
+Operation 'createOne' for model 'StudentAcademicInfo' does not match any query.
+Wed Sep 13 2023 21:30:16 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.studentAcademicInfo.create()` invocation:
+
+
+Operation 'createOne' for model 'StudentAcademicInfo' does not match any query.

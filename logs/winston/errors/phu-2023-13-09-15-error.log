@@ -1,0 +1,22 @@
+Wed Sep 13 2023 15:20:52 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.studentEnrolledCourseMarks.findFirst()` invocation:
+
+{
+  where: {
+    student: {
+      id: "4a35ec9b-b60e-41dc-bfb4-62d026a844a0"
+    },
+    academicSemester: {
+      id: "e37dff96-7ed6-4b27-9294-ab5999acd8ae"
+    },
+    studentEnrolledCourse: {
+      course: {
+        id: "7563129d-ca4a-455d-ab1a-37018c411f21"
+      }
+    },
+    exam: "Final"
+          ~~~~~~~
+  }
+}
+
+Invalid value for argument `exam`. Expected ExamType.

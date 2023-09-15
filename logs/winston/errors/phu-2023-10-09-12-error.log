@@ -1,0 +1,13 @@
+Sun Sep 10 2023 12:10:35 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "offeredCourseId"
+    ],
+    "message": "Offered course id is required"
+  }
+]
+Sun Sep 10 2023 12:44:46 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Forbidden

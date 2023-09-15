@@ -15,6 +15,34 @@ const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
+  const result = await OfferedCourseSectionService.getAllFromDB();
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Offer course section retrieve successfully!!!',
+    data: result
+  });
+});
+const getOfferedCourseSectionById = catchAsync(
+  async (req: Request, res: Response) => {
+    const result =
+      await OfferedCourseSectionService.getOfferedCourseSectionById(
+        req.params.id
+      );
+
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Single Offer course section retrieve successfully!!!',
+      data: result
+    });
+  }
+);
+
 export const OfferedCourseSectionController = {
-  insertIntoDB
+  insertIntoDB,
+  getAllFromDB,
+  getOfferedCourseSectionById
 };

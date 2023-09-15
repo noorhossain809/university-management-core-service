@@ -9,5 +9,6 @@ router.post(
   '/create-semester',
   AcademicSemesterController.createAcademicSemester
 );
+router.delete('/:id', AcademicSemesterController.deleteAcademicSemester);
 
 export const AcademicSemesterRoutes = router;

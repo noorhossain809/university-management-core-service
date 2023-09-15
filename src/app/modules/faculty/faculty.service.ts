@@ -125,10 +125,94 @@ const removeCourses = async (
   return removeCoursesData;
 };
 
+const myCourses = async (
+  authUserId: string,
+  filter: {
+    courseId?: string | undefined;
+    academicSemesterId?: string | undefined;
+  }
+) => {
+  if (!filter.academicSemesterId) {
+    const currentSemester = await prisma.academicSemester.findFirst({
+      where: {
+        isCurrent: true
+      }
+    });
+    filter.academicSemesterId = currentSemester?.id;
+  }
+
+  const offeredCourseSection = await prisma.offeredCourseSection.findMany({
+    where: {
+      offeredCourseClassSchedules: {
+        some: {
+          Faculty: {
+            facultyId: authUserId
+          }
+        }
+      },
+      OfferedCourse: {
+        semesterRegistration: {
+          academicSemester: {
+            id: filter.academicSemesterId
+          }
+        }
+      }
+    },
+    include: {
+      OfferedCourse: {
+        include: {
+          course: true
+        }
+      },
+      offeredCourseClassSchedules: {
+        include: {
+          Room: {
+            include: {
+              building: true
+            }
+          }
+        }
+      }
+    }
+  });
+
+  const courseAndSchedule = offeredCourseSection.reduce(
+    (acc: any, obj: any) => {
+      const course = obj.OfferedCourse.course;
+      const classSchedule = obj.offeredCourseClassSchedules;
+
+      const existingCourse = acc.find(
+        (item: any) => item.course?.id === course?.id
+      );
+
+      if (existingCourse) {
+        existingCourse.sections.push({
+          section: obj,
+          classSchedule
+        });
+      } else {
+        acc.push({
+          course,
+          sections: [
+            {
+              section: obj,
+              classSchedule
+            }
+          ]
+        });
+      }
+      return acc;
+    },
+    []
+  );
+  return courseAndSchedule;
+};
+
 export const FacultyService = {
   createFaculty,
   getAllFaculty,
   singleFaculty,
   assignCourses,
-  removeCourses
+  removeCourses,
+  myCourses
 };

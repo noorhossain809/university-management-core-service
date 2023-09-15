@@ -9,5 +9,6 @@ router.post(
   validateRequest(OfferedCourseValidations.create),
   OfferedCourseController.insertIntoDB
 );
+router.get('/', OfferedCourseController.getAllFromDB);
 
 export const OfferedCourseRoutes = router;
