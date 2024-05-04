@@ -1,0 +1,26 @@
+Sun Sep 24 2023 11:1:30 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "Shopify",
+    code: "01",
+    credits: 4,
+    prerequisiteCourse: [
+    ~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "7563129d-ca4a-455d-ab1a-37018c411f21"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   Prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   PrerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPreRequisiteInput,
+?   faculties?: courseFacultyCreateNestedManyWithoutCourseInput,
+?   offerdCourses?: OfferdCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `prerequisiteCourse`. Available options are listed in green.

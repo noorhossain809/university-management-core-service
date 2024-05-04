@@ -1,0 +1,149 @@
+Sun Sep 24 2023 18:0:17 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "Wordpress",
+    code: "02",
+    credits: 4,
+    prerequisiteCourse: [
+    ~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "6dd007a8-5552-45d9-8c09-eda50081022d"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   Prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   PrerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPreRequisiteInput,
+?   faculties?: courseFacultyCreateNestedManyWithoutCourseInput,
+?   offerdCourses?: OfferdCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `prerequisiteCourse`. Available options are listed in green.
+Sun Sep 24 2023 18:0:48 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "Shopify",
+    code: "01",
+    credits: 4,
+    prerequisiteCourse: [
+    ~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "6dd007a8-5552-45d9-8c09-eda50081022d"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   Prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   PrerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPreRequisiteInput,
+?   faculties?: courseFacultyCreateNestedManyWithoutCourseInput,
+?   offerdCourses?: OfferdCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `prerequisiteCourse`. Available options are listed in green.
+Sun Sep 24 2023 18:8:30 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Sun Sep 24 2023 18:8:43 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Invalid Semester Code
+Sun Sep 24 2023 18:8:54 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Invalid Semester Code
+Sun Sep 24 2023 18:9:3 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "received": "Autum",
+    "code": "invalid_enum_value",
+    "options": [
+      "Autumn",
+      "Summer",
+      "Fall"
+    ],
+    "path": [
+      "body",
+      "title"
+    ],
+    "message": "Invalid enum value. Expected 'Autumn' | 'Summer' | 'Fall', received 'Autum'"
+  }
+]
+Sun Sep 24 2023 18:13:10 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "Wordpree Elimentor",
+    code: "03",
+    credits: 4,
+    prerequisiteCourse: [
+    ~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "54fa8676-5a75-47e2-85b7-1cb55544f313"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   Prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   PrerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPreRequisiteInput,
+?   faculties?: courseFacultyCreateNestedManyWithoutCourseInput,
+?   offerdCourses?: OfferdCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `prerequisiteCourse`. Available options are listed in green.
+Sun Sep 24 2023 18:13:55 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "Wordpree Elimentor",
+    code: "03",
+    credits: 4,
+    preRequisiteCourses: [
+    ~~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "54fa8676-5a75-47e2-85b7-1cb55544f313"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   Prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   PrerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPreRequisiteInput,
+?   faculties?: courseFacultyCreateNestedManyWithoutCourseInput,
+?   offerdCourses?: OfferdCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `preRequisiteCourses`. Available options are listed in green.
+Sun Sep 24 2023 18:15:16 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "Wordpree Elimentor",
+    code: "03",
+    credits: 4,
+    preRequisiteCourses: [
+    ~~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "54fa8676-5a75-47e2-85b7-1cb55544f313"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   Prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   PrerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPreRequisiteInput,
+?   faculties?: courseFacultyCreateNestedManyWithoutCourseInput,
+?   offerdCourses?: OfferdCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `preRequisiteCourses`. Available options are listed in green.

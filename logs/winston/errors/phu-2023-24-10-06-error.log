@@ -1,0 +1,9 @@
+Tue Oct 24 2023 6:25:27 } [PH] error: 
+Invalid `prisma.faculty.create()` invocation in
+C:\web-development\Next-Level\one-with\university-management-core-service\src\app\modules\faculty\faculty.service.ts:11:39
+
+   8 const prisma = new PrismaClient();
+   9 
+  10 const createFaculty = async (facultyData: Faculty): Promise<Faculty> => {
+→ 11   const result = await prisma.faculty.create(
+Foreign key constraint failed on the field: `faculties_academicDepartmentId_fkey (index)`

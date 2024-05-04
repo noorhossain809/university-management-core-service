@@ -18,7 +18,13 @@ const insertIntoDB = async (
   await OfferedCourseClassScheduleUtils.checkFacultyAvailable(data);
 
   const result = await prisma.offeredCourseClassSchedule.create({
-    data
+    data,
+    include: {
+      SemesterRegistration: true,
+      OfferedCourseSection: true,
+      Room: true,
+      Faculty: true
+    }
   });
 
   return result;

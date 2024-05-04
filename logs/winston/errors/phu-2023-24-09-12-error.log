@@ -1,0 +1,72 @@
+Sun Sep 24 2023 12:6:24 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Sun Sep 24 2023 12:25:6 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+{
+  data: {
+    title: "Room-B",
+    floor: "1st floor",
+    ~~~~~
+    buildingId: "8b10b9c5-829d-4d34-91f9-089424dc3867",
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   offeredCourseClassSchedules?: OfferedCourseClassScheduleUncheckedCreateNestedManyWithoutRoomInput
+  }
+}
+
+Unknown argument `floor`. Available options are listed in green.
+Sun Sep 24 2023 12:27:14 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+{
+  data: {
+    title: "Room-B",
+    floor: "1st floor",
+    ~~~~~
+    buildingId: "8b10b9c5-829d-4d34-91f9-089424dc3867",
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   offeredCourseClassSchedules?: OfferedCourseClassScheduleUncheckedCreateNestedManyWithoutRoomInput
+  }
+}
+
+Unknown argument `floor`. Available options are listed in green.
+Sun Sep 24 2023 12:27:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+{
+  data: {
+    title: "Room-B",
+    floor: "1st floor",
+    ~~~~~
+    buildingId: "8b10b9c5-829d-4d34-91f9-089424dc3867",
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   offeredCourseClassSchedules?: OfferedCourseClassScheduleUncheckedCreateNestedManyWithoutRoomInput
+  }
+}
+
+Unknown argument `floor`. Available options are listed in green.
+Sun Sep 24 2023 12:29:30 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+
+The column `floor` does not exist in the current database.
+Sun Sep 24 2023 12:31:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+
+The column `floor` does not exist in the current database.
+Sun Sep 24 2023 12:33:17 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+
+The column `floor` does not exist in the current database.
+Sun Sep 24 2023 12:50:19 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+
+The column `floor` does not exist in the current database.

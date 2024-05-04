@@ -1,0 +1,5 @@
+Wed Oct 11 2023 12:56:15 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.semesterRegistration.update()` invocation:
+
+
+Foreign key constraint failed on the field: `semester_registration_academicSemesterId_fkey (index)`

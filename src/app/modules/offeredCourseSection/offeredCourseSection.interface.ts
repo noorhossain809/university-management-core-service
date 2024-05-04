@@ -14,3 +14,8 @@ export type IClassSchedule = {
   roomId: string;
   facultyId: string;
 };
+
+export type IOfferedCourseSectionFilterRequest = {
+  searchTerm?: string | undefined;
+  offeredCourseId?: string | undefined;
+};

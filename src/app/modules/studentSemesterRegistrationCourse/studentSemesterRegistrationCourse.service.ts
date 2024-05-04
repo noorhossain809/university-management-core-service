@@ -99,7 +99,7 @@ const enrollIntoCourse = async (
   });
 
   return {
-    message: 'Successfully enrolled into course!'
+    message: 'Successfully enrolled!'
   };
 };
 

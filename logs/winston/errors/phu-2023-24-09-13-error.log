@@ -1,0 +1,131 @@
+Sun Sep 24 2023 13:11:48 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.findMany()` invocation:
+
+
+The column `rooms.floor` does not exist in the current database.
+Sun Sep 24 2023 13:12:1 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+
+The column `floor` does not exist in the current database.
+Sun Sep 24 2023 13:12:52 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.findMany()` invocation:
+
+
+The column `rooms.floor` does not exist in the current database.
+Sun Sep 24 2023 13:37:17 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Sun Sep 24 2023 13:50:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.update()` invocation:
+
+{
+  where: {
+    id: "b1c3e184-5d63-4828-9f28-00eeaf6689bc"
+  },
+  data: {
+    headers: {
+    ~~~~~~~
+      Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBLTAwMDAyIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjk0MzIzNDM1LCJleHAiOjE3MjU4NTk0MzV9.vxjjCI8pnhJlWpG75_fcX2vfBfCypVRWy2f5bAD3Eek"
+    },
+?   id?: String | StringFieldUpdateOperationsInput,
+?   title?: String | StringFieldUpdateOperationsInput,
+?   floor?: String | StringFieldUpdateOperationsInput,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   building?: BuildingUpdateOneRequiredWithoutRoomsNestedInput,
+?   offeredCourseClassSchedules?: OfferedCourseClassScheduleUpdateManyWithoutRoomNestedInput
+  }
+}
+
+Unknown argument `headers`. Available options are listed in green.
+Sun Sep 24 2023 13:52:25 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.update()` invocation:
+
+{
+  where: {
+    id: "b1c3e184-5d63-4828-9f28-00eeaf6689bc"
+  },
+  data: {
+    headers: {
+    ~~~~~~~
+      Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBLTAwMDAyIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjk0MzIzNDM1LCJleHAiOjE3MjU4NTk0MzV9.vxjjCI8pnhJlWpG75_fcX2vfBfCypVRWy2f5bAD3Eek"
+    },
+?   id?: String | StringFieldUpdateOperationsInput,
+?   title?: String | StringFieldUpdateOperationsInput,
+?   floor?: String | StringFieldUpdateOperationsInput,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   building?: BuildingUpdateOneRequiredWithoutRoomsNestedInput,
+?   offeredCourseClassSchedules?: OfferedCourseClassScheduleUpdateManyWithoutRoomNestedInput
+  }
+}
+
+Unknown argument `headers`. Available options are listed in green.
+Sun Sep 24 2023 13:54:25 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.update()` invocation:
+
+{
+  where: {
+    id: "b1c3e184-5d63-4828-9f28-00eeaf6689bc"
+  },
+  data: {
+    headers: {
+    ~~~~~~~
+      Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBLTAwMDAyIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjk0MzIzNDM1LCJleHAiOjE3MjU4NTk0MzV9.vxjjCI8pnhJlWpG75_fcX2vfBfCypVRWy2f5bAD3Eek"
+    },
+?   id?: String | StringFieldUpdateOperationsInput,
+?   title?: String | StringFieldUpdateOperationsInput,
+?   floor?: String | StringFieldUpdateOperationsInput,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   building?: BuildingUpdateOneRequiredWithoutRoomsNestedInput,
+?   offeredCourseClassSchedules?: OfferedCourseClassScheduleUpdateManyWithoutRoomNestedInput
+  }
+}
+
+Unknown argument `headers`. Available options are listed in green.
+Sun Sep 24 2023 13:54:41 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.update()` invocation:
+
+{
+  where: {
+    id: "b1c3e184-5d63-4828-9f28-00eeaf6689bc"
+  },
+  data: {
+    headers: {
+    ~~~~~~~
+      Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBLTAwMDAyIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjk0MzIzNDM1LCJleHAiOjE3MjU4NTk0MzV9.vxjjCI8pnhJlWpG75_fcX2vfBfCypVRWy2f5bAD3Eek"
+    },
+?   id?: String | StringFieldUpdateOperationsInput,
+?   title?: String | StringFieldUpdateOperationsInput,
+?   floor?: String | StringFieldUpdateOperationsInput,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   building?: BuildingUpdateOneRequiredWithoutRoomsNestedInput,
+?   offeredCourseClassSchedules?: OfferedCourseClassScheduleUpdateManyWithoutRoomNestedInput
+  }
+}
+
+Unknown argument `headers`. Available options are listed in green.
+Sun Sep 24 2023 13:55:34 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.update()` invocation:
+
+{
+  where: {
+    id: "b1c3e184-5d63-4828-9f28-00eeaf6689bc"
+  },
+  data: {
+    headers: {
+    ~~~~~~~
+      Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBLTAwMDAyIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjk0MzIzNDM1LCJleHAiOjE3MjU4NTk0MzV9.vxjjCI8pnhJlWpG75_fcX2vfBfCypVRWy2f5bAD3Eek"
+    },
+?   id?: String | StringFieldUpdateOperationsInput,
+?   title?: String | StringFieldUpdateOperationsInput,
+?   floor?: String | StringFieldUpdateOperationsInput,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   building?: BuildingUpdateOneRequiredWithoutRoomsNestedInput,
+?   offeredCourseClassSchedules?: OfferedCourseClassScheduleUpdateManyWithoutRoomNestedInput
+  }
+}
+
+Unknown argument `headers`. Available options are listed in green.

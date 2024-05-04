@@ -18,9 +18,11 @@ const create = z.object({
     middleName: z.string({
       required_error: 'Middle name is required'
     }),
-    profileImage: z.string({
-      required_error: 'Profile image is required'
-    }),
+    profileImage: z
+      .string({
+        required_error: 'Profile image is required'
+      })
+      .optional(),
     email: z.string({
       required_error: 'Email is required'
     }),

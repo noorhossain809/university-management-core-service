@@ -13,7 +13,14 @@ router.get(
   auth(ENUM_USER_ROLE.FACULTY),
   FacultyController.myCourses
 );
+router.get(
+  '/my-course-student',
+  auth(ENUM_USER_ROLE.FACULTY),
+  FacultyController.getMyCourseStudent
+);
+
 router.get('/:id', FacultyController.singleFaculty);
+
 router.post(
   '/',
   validateRequest(FacultyValidation.createFacultyZodSchema),

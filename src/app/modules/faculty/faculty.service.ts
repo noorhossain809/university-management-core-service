@@ -1,17 +1,36 @@
-import { Faculty, Prisma, PrismaClient, courseFaculty } from '@prisma/client';
+import { Faculty, Prisma, Student, courseFaculty } from '@prisma/client';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import { FacultySearchAbleFields } from './faculty.constant';
-import { IFacultyFilterableFields } from './faculty.interface';
+import {
+  IFacultyCourseStudentRequest,
+  IFacultyFilterableFields
+} from './faculty.interface';
+import prisma from '../../../shared/prisma';
 
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 
-const createFaculty = async (facultyData: Faculty): Promise<Faculty> => {
+// const createFaculty = async (facultyData: Faculty): Promise<Faculty> => {
+//   const result = await prisma.faculty.create({
+//     data: facultyData,
+//     include: {
+//       academicDepartment: true,
+//       academicFaculty: true
+//     }
+//   });
+
+//   return result;
+// };
+
+const insertIntoDB = async (data: Faculty): Promise<Faculty> => {
   const result = await prisma.faculty.create({
-    data: facultyData
+    data,
+    include: {
+      academicDepartment: true,
+      academicFaculty: true
+    }
   });
-
   return result;
 };
 
@@ -208,11 +227,141 @@ const myCourses = async (
   return courseAndSchedule;
 };
 
+const getMyCourseStudent = async (
+  filters: IFacultyCourseStudentRequest,
+  options: IPaginationOptions,
+  authUser: any
+): Promise<IGenericResponse<Student[]>> => {
+  const { limit, page, skip } = paginationHelpers.calculatePagination(options);
+
+  if (!filters.academicSemesterId) {
+    const currentSemester = await prisma.academicSemester.findFirst({
+      where: {
+        isCurrent: true
+      }
+    });
+    if (currentSemester) {
+      filters.academicSemesterId = currentSemester.id;
+    }
+  }
+
+  const offeredCourseSections =
+    await prisma.studentSemesterRegistrationCourse.findMany({
+      where: {
+        offeredCourse: {
+          course: {
+            id: filters.courseId
+          }
+        },
+        offeredCourseSection: {
+          OfferedCourse: {
+            semesterRegistration: {
+              academicSemester: {
+                id: filters.academicSemesterId
+              }
+            }
+          },
+          id: filters.offeredCourseSectionId
+        }
+      },
+      include: {
+        student: true
+      },
+      take: limit,
+      skip
+    });
+
+  const students = offeredCourseSections.map(
+    offeredCourseSection => offeredCourseSection.student
+  );
+
+  const total = await prisma.studentSemesterRegistrationCourse.count({
+    where: {
+      offeredCourse: {
+        course: {
+          id: filters.courseId
+        }
+      },
+      offeredCourseSection: {
+        SemesterRegistration: {
+          academicSemester: {
+            id: filters.academicSemesterId
+          }
+        },
+        id: filters.offeredCourseSectionId
+      }
+    }
+  });
+
+  return {
+    meta: {
+      page,
+      limit,
+      total
+    },
+    data: students
+  };
+};
+
+const createFacultyFromEvents = async (e: any) => {
+  const facultyData: Partial<Faculty> = {
+    facultyId: e.id,
+    firstName: e.name.firstName,
+    middleName: e.name.middleName,
+    lastName: e.name.lastName,
+    email: e.email,
+    contactNo: e.contactNo,
+    gender: e.gender,
+    bloodGroup: e.bloodGroup,
+    designation: e.designation,
+    academicDepartmentId: e.academicDepartment.syncId,
+    academicFacultyId: e.academicFaculty.syncId
+  };
+
+  await insertIntoDB(facultyData as Faculty);
+};
+
+const updateFacultyFromEvents = async (e: any) => {
+  const isExist = await prisma.faculty.findFirst({
+    where: {
+      facultyId: e.id
+    }
+  });
+  if (!isExist) {
+    createFacultyFromEvents(e);
+  } else {
+    const facultyData: Partial<Faculty> = {
+      facultyId: e.id,
+      firstName: e.name.firstName,
+      middleName: e.name.middleName,
+      lastName: e.name.lastName,
+      email: e.email,
+      contactNo: e.contactNo,
+      gender: e.gender,
+      bloodGroup: e.bloodGroup,
+      designation: e.designation,
+      academicDepartmentId: e.academicDepartment.syncId,
+      academicFacultyId: e.academicFaculty.syncId
+    };
+
+    const result = await prisma.faculty.updateMany({
+      where: {
+        facultyId: e.id
+      },
+      data: facultyData
+    });
+    console.log(result);
+  }
+};
+
 export const FacultyService = {
-  createFaculty,
+  insertIntoDB,
   getAllFaculty,
   singleFaculty,
   assignCourses,
   removeCourses,
-  myCourses
+  myCourses,
+  createFacultyFromEvents,
+  updateFacultyFromEvents,
+  getMyCourseStudent
 };

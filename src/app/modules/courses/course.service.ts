@@ -14,7 +14,8 @@ import {
 } from './course.interface';
 
 const createACourse = async (data: ICourseData): Promise<any> => {
-  const { prerequisiteCourses, ...courseData } = data;
+  const { preRequisiteCourses, ...courseData } = data;
+  console.log('pre', preRequisiteCourses);
 
   const newCourse = await prisma.$transaction(async transactionClient => {
     const result = await transactionClient.course.create({
@@ -25,9 +26,9 @@ const createACourse = async (data: ICourseData): Promise<any> => {
       throw new ApiError(httpStatus.BAD_REQUEST, 'Unable to create course');
     }
 
-    if (prerequisiteCourses && prerequisiteCourses.length > 0) {
+    if (preRequisiteCourses && preRequisiteCourses.length > 0) {
       await asyncForEch(
-        prerequisiteCourses,
+        preRequisiteCourses,
         async (prerequisiteCourse: IPrerequisiteCourseRequest) => {
           const createPrerequisite =
             await transactionClient.courseToPrerequisite.create({

@@ -3,7 +3,13 @@ import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import prisma from '../../../shared/prisma';
-import { IAcademicDepartmentSearchAbleFields } from './academicDepartment.constant';
+import { RedisClient } from '../../../shared/redis';
+import {
+  EVENT_ACADEMIC_DEPARTMENT_CREATED,
+  EVENT_ACADEMIC_DEPARTMENT_DELETED,
+  EVENT_ACADEMIC_DEPARTMENT_UPDATED,
+  IAcademicDepartmentSearchAbleFields
+} from './academicDepartment.constant';
 import { IAcademicDepartmentFilterableFields } from './academicDepartment.interface';
 
 const createAcademicDepartment = async (
@@ -12,6 +18,13 @@ const createAcademicDepartment = async (
   const result = await prisma.academicDepartment.create({
     data: academicDepartment
   });
+  if (result) {
+    await RedisClient.publish(
+      EVENT_ACADEMIC_DEPARTMENT_CREATED,
+      JSON.stringify(result)
+    );
+  }
+
   return result;
 };
 
@@ -55,7 +68,10 @@ const getAllAcademicDepartment = async (
     orderBy:
       options.sortBy && options.sortOrder
         ? { [options.sortBy]: options.sortOrder }
-        : { createdAt: 'desc' }
+        : { createdAt: 'desc' },
+    include: {
+      academicFaculty: true
+    }
   });
   const total = await prisma.academicDepartment.count();
 
@@ -81,8 +97,52 @@ const singleAcademicDepartment = async (
   return result;
 };
 
+const updateOneFromDB = async (
+  id: string,
+  payload: Partial<AcademicDepartment>
+): Promise<AcademicDepartment | null> => {
+  const result = await prisma.academicDepartment.update({
+    where: {
+      id
+    },
+    data: payload
+  });
+
+  if (result) {
+    await RedisClient.publish(
+      EVENT_ACADEMIC_DEPARTMENT_UPDATED,
+      JSON.stringify(result)
+    );
+  }
+
+  return result;
+};
+const deleteOneFromDB = async (
+  id: string
+): Promise<AcademicDepartment | null> => {
+  console.log(id);
+  const result = await prisma.academicDepartment.delete({
+    where: {
+      id
+    }
+  });
+
+  console.log(result);
+
+  if (result) {
+    await RedisClient.publish(
+      EVENT_ACADEMIC_DEPARTMENT_DELETED,
+      JSON.stringify(result)
+    );
+  }
+
+  return result;
+};
+
 export const AcademicDepartmentService = {
   createAcademicDepartment,
   getAllAcademicDepartment,
-  singleAcademicDepartment
+  singleAcademicDepartment,
+  updateOneFromDB,
+  deleteOneFromDB
 };

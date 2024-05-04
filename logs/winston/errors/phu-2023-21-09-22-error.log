@@ -1,0 +1,72 @@
+Thu Sep 21 2023 22:7:17 } [PH] error: 
+Invalid `prisma.faculty.create()` invocation in
+C:\web-development\Next-Level\university-management-core-service\src\app\modules\faculty\faculty.service.ts:11:39
+
+   8 const prisma = new PrismaClient();
+   9 
+  10 const createFaculty = async (facultyData: Faculty): Promise<Faculty> => {
+→ 11   const result = await prisma.faculty.create({
+         data: {
+           facultyId: "F-00008",
+           firstName: "MD",
+           middleName: "Hossain",
+           lastName: "Noor",
+           email: "hossainvip@gmail.com",
+           contactNo: "000000099",
+           gender: "male",
+           bloodGroup: "A+",
+           academicDepartmentId: "3fb63cd8-cd84-4110-88a5-e048d0b3f579",
+           academicFacultyId: "4491c1f2-28c9-415b-8feb-204c100b67ce",
+       +   profileImage: String
+         }
+       })
+
+Argument `profileImage` is missing.
+Thu Sep 21 2023 22:10:6 } [PH] error: 
+Invalid `prisma.faculty.create()` invocation in
+C:\web-development\Next-Level\university-management-core-service\src\app\modules\faculty\faculty.service.ts:11:39
+
+   8 const prisma = new PrismaClient();
+   9 
+  10 const createFaculty = async (facultyData: Faculty): Promise<Faculty> => {
+→ 11   const result = await prisma.faculty.create({
+         data: {
+           facultyId: "F-00009",
+           firstName: "MD",
+           middleName: "Hossain",
+           lastName: "Noor",
+           email: "hossainvip2@gmail.com",
+           contactNo: "0000000299",
+           gender: "male",
+           bloodGroup: "A+",
+           academicDepartmentId: "3fb63cd8-cd84-4110-88a5-e048d0b3f579",
+           academicFacultyId: "4491c1f2-28c9-415b-8feb-204c100b67ce",
+       +   profileImage: String
+         }
+       })
+
+Argument `profileImage` is missing.
+Thu Sep 21 2023 22:12:59 } [PH] error: 
+Invalid `prisma.faculty.create()` invocation in
+C:\web-development\Next-Level\university-management-core-service\src\app\modules\faculty\faculty.service.ts:11:39
+
+   8 const prisma = new PrismaClient();
+   9 
+  10 const createFaculty = async (facultyData: Faculty): Promise<Faculty> => {
+→ 11   const result = await prisma.faculty.create({
+         data: {
+           facultyId: "F-00010",
+           firstName: "MD",
+           middleName: "Hossain",
+           lastName: "Noor",
+           email: "hossainvip3@gmail.com",
+           contactNo: "00000002399",
+           gender: "male",
+           bloodGroup: "A+",
+           academicDepartmentId: "3fb63cd8-cd84-4110-88a5-e048d0b3f579",
+           academicFacultyId: "4491c1f2-28c9-415b-8feb-204c100b67ce",
+       +   designation: String
+         }
+       })
+
+Argument `designation` is missing.

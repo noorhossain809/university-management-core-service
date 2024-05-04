@@ -6,8 +6,8 @@ import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
 import { AcademicSemesterService } from './academicSemester.service';
 
-const createAcademicSemester = async (req: Request, res: Response) => {
-  try {
+const createAcademicSemester = catchAsync(
+  async (req: Request, res: Response) => {
     const result = await AcademicSemesterService.createAcademicSemester(
       req.body
     );
@@ -18,10 +18,8 @@ const createAcademicSemester = async (req: Request, res: Response) => {
       message: 'academic semester created successfully!!!',
       data: result
     });
-  } catch (error) {
-    res.send(error);
   }
-};
+);
 
 const getAllAcademicSemester = catchAsync(
   async (req: Request, res: Response) => {
@@ -65,17 +63,29 @@ const singleAcademicSemester = async (req: Request, res: Response) => {
     res.send(error);
   }
 };
+const updateIntoDB = catchAsync(async (req: Request, res: Response) => {
+  const result = await AcademicSemesterService.updateIntoDB(
+    req.params.id,
+    req.body
+  );
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'academic semester updated successfully!!!',
+    data: result
+  });
+});
 const deleteAcademicSemester = async (req: Request, res: Response) => {
   try {
     const result = await AcademicSemesterService.deleteAcademicSemester(
       req.params.id
     );
 
-    sendResponse<AcademicSemester>(res, {
+    sendResponse(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: 'academic semester deleted successfully!!!',
-      data: result
+      message: 'academic semester deleted successfully!!!'
     });
   } catch (error) {
     res.send(error);
@@ -86,5 +96,6 @@ export const AcademicSemesterController = {
   createAcademicSemester,
   getAllAcademicSemester,
   singleAcademicSemester,
-  deleteAcademicSemester
+  deleteAcademicSemester,
+  updateIntoDB
 };

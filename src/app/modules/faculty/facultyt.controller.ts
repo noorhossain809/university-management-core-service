@@ -8,7 +8,7 @@ import { FacultyService } from './faculty.service';
 
 const createFaculty = async (req: Request, res: Response) => {
   try {
-    const result = await FacultyService.createFaculty(req.body);
+    const result = await FacultyService.insertIntoDB(req.body);
 
     sendResponse<Faculty>(res, {
       statusCode: httpStatus.OK,
@@ -94,11 +94,33 @@ const myCourses = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getMyCourseStudent = catchAsync(async (req: Request, res: Response) => {
+  const user = (req as any).user;
+
+  const filter = pick(req.query, [
+    'academicSemesterId',
+    'courseId',
+    'offeredCourseSectionId'
+  ]);
+  const options = pick(req.query, ['limit', 'page']);
+
+  const result = await FacultyService.getMyCourseStudent(filter, options, user);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'faculty course student retrieve successfully!!!',
+    meta: result.meta,
+    data: result.data
+  });
+});
+
 export const FacultyController = {
   createFaculty,
   getAllFaculty,
   singleFaculty,
   assignCourses,
   removeCourses,
-  myCourses
+  myCourses,
+  getMyCourseStudent
 };

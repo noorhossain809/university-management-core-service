@@ -1,0 +1,26 @@
+Mon Sep 18 2023 10:24:25 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "year"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "received": "31",
+    "code": "invalid_enum_value",
+    "options": [
+      "01",
+      "02",
+      "03"
+    ],
+    "path": [
+      "body",
+      "code"
+    ],
+    "message": "Invalid enum value. Expected '01' | '02' | '03', received '31'"
+  }
+]

@@ -1,0 +1,25 @@
+Thu Sep 21 2023 12:19:11 } [PH] error: 
+Invalid `prisma.student.create()` invocation in
+C:\web-development\Next-Level\university-management-core-service\src\app\modules\students\students.service.ts:17:39
+
+  14 const prisma = new PrismaClient();
+  15 
+  16 const createStudents = async (studentsData: Student): Promise<Student> => {
+→ 17   const result = await prisma.student.create({
+         data: {
+           studentId: "800200003",
+           firstName: "MD",
+           middleName: "NOOR",
+           lastName: "HOSSAIN",
+           email: "hossain@gmail.com",
+           contactNo: "016345789345",
+           gender: "male",
+           bloodGroup: "A+",
+           academicDepartmentId: "3fb63cd8-cd84-4110-88a5-e048d0b3f579",
+           academicFacultyId: "4491c1f2-28c9-415b-8feb-204c100b67ce",
+           academicSemesterId: "8903adac-e660-44b7-9fbd-d06af06957ba",
+       +   profileImage: String
+         }
+       })
+
+Argument `profileImage` is missing.

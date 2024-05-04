@@ -1,0 +1,9 @@
+Wed Oct 11 2023 9:58:27 } [PH] error: 
+Invalid `prisma.academicSemester.delete()` invocation in
+C:\web-development\Next-Level\one-with\university-management-core-service\src\app\modules\academicSemester\academicSemester.service.ts:150:39
+
+  147   await createAcademicSemester(academicSemesterData as AcademicSemester);
+  148 };
+  149 const deleteAcademicSemesterEvent = async (e: any) => {
+→ 150   await prisma.academicSemester.delete(
+An operation failed because it depends on one or more records that were required but not found. Record to delete does not exist.

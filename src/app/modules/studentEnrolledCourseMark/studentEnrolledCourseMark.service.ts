@@ -1,6 +1,8 @@
+import { PaginationHelper } from './../../../../../university-management-auth-service/src/helper/paginationHelper';
 import {
   ExamType,
   PrismaClient,
+  StudentEnrolledCourseMarks,
   StudentEnrolledCourseStatus
 } from '@prisma/client';
 import {
@@ -11,12 +13,17 @@ import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
 import prisma from '../../../shared/prisma';
 import { StudentEnrolledCourseMarkUtils } from './studentEnrolledCourseMark.utils';
+import { IStudentEnrolledCourseMarkRequest } from './studentEnrolledCourseMark.interface';
+import { IPaginationOptions } from '../../../interfaces/pagination';
+import { paginationHelpers } from '../../../helpers/paginationHelper';
+import { IGenericResponse } from '../../../interfaces/common';
 
 const createStudentEnrolledCourseDefaultMark = async (
   transactionClient: Omit<
     PrismaClient<PrismaClientOptions, never, DefaultArgs>,
     '$connect' | '$disconnect' | '$on' | '$transaction' | '$use' | '$extends'
   >,
+  // prismaClient: Omit<PrismaClient<PrismaClientOptions, never, DefaultArgs>, "$connect" | "$disconnect" | "$on" | "$transaction" | "$use" | "$extends">,
   payload: {
     studentId: string;
     studentEnrolledCourseId: string;
@@ -26,6 +33,7 @@ const createStudentEnrolledCourseDefaultMark = async (
   const isExistMidtermData =
     await transactionClient.studentEnrolledCourseMarks.findFirst({
       where: {
+        exam: ExamType.MIDTERM,
         student: {
           id: payload.studentId
         },
@@ -64,6 +72,7 @@ const createStudentEnrolledCourseDefaultMark = async (
   const isExistFinalData =
     await transactionClient.studentEnrolledCourseMarks.findFirst({
       where: {
+        exam: ExamType.FINAL,
         student: {
           id: payload.studentId
         },
@@ -98,6 +107,46 @@ const createStudentEnrolledCourseDefaultMark = async (
       }
     });
   }
+};
+
+const getAllFromDB = async (
+  filters: IStudentEnrolledCourseMarkRequest,
+  options: IPaginationOptions
+): Promise<IGenericResponse<StudentEnrolledCourseMarks[]>> => {
+  const { limit, page } = paginationHelpers.calculatePagination(options);
+
+  const marks = await prisma.studentEnrolledCourseMarks.findMany({
+    where: {
+      student: {
+        id: filters.studentId
+      },
+      academicSemester: {
+        id: filters.academicSemesterId
+      },
+      studentEnrolledCourse: {
+        course: {
+          id: filters.courseId
+        }
+      }
+    },
+    include: {
+      student: true,
+      studentEnrolledCourse: {
+        include: {
+          course: true
+        }
+      }
+    }
+  });
+
+  return {
+    meta: {
+      total: marks.length,
+      limit,
+      page
+    },
+    data: marks
+  };
 };
 
 const updateMarks = async (payload: any) => {
@@ -176,7 +225,9 @@ const updateFinalMark = async (payload: any) => {
           id: academicSemesterId
         },
         studentEnrolledCourse: {
-          id: studentEnrolledCourse?.id
+          course: {
+            id: courseId
+          }
         }
       }
     });
@@ -273,8 +324,59 @@ const updateFinalMark = async (payload: any) => {
   return grades;
 };
 
+const getMyCourseMarks = async (
+  filter: IStudentEnrolledCourseMarkRequest,
+  options: IPaginationOptions,
+  authUser: any
+): Promise<IGenericResponse<StudentEnrolledCourseMarks[]>> => {
+  const { limit, page } = PaginationHelper.calculatePagination(options);
+  const student = await prisma.student.findFirst({
+    where: {
+      studentId: authUser.userId
+    }
+  });
+
+  if (!student) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Student not found');
+  }
+
+  const marks = await prisma.studentEnrolledCourseMarks.findMany({
+    where: {
+      student: {
+        id: student.id
+      },
+      academicSemester: {
+        id: filter.academicSemesterId
+      },
+      studentEnrolledCourse: {
+        course: {
+          id: filter.courseId
+        }
+      }
+    },
+    include: {
+      studentEnrolledCourse: {
+        include: {
+          course: true
+        }
+      }
+    }
+  });
+
+  return {
+    meta: {
+      page,
+      limit,
+      total: marks.length
+    },
+    data: marks
+  };
+};
+
 export const StudentEnrolledCourseMarkService = {
   createStudentEnrolledCourseDefaultMark,
+  getAllFromDB,
   updateMarks,
-  updateFinalMark
+  updateFinalMark,
+  getMyCourseMarks
 };

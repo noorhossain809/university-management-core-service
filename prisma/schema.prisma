@@ -65,7 +65,7 @@ model Faculty {
   firstName    String
   middleName   String
   lastName     String
-  profileImage String
+  profileImage String?
   email        String
   contactNo    String
   gender       String
@@ -91,7 +91,7 @@ model Student {
   firstName    String
   middleName   String
   lastName     String
-  profileImage String
+  profileImage String?
   email        String
   contactNo    String
   gender       String
@@ -130,6 +130,7 @@ model Building {
 model Room {
   id        String   @id @default(uuid())
   title     String
+  floor     String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt()
 
@@ -199,6 +200,8 @@ model SemesterRegistration {
 
 model OfferdCourse {
   id                                 String                              @id @default(uuid())
+  createdAt                          DateTime                            @default(now())
+  updatedAt                          DateTime                            @updatedAt()
   courseId                           String
   course                             Course                              @relation(fields: [courseId], references: [id])
   academicDepartmentId               String

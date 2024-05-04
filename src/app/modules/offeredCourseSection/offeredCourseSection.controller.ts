@@ -3,6 +3,8 @@ import httpStatus from 'http-status';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { OfferedCourseSectionService } from './offeredCourseSection.service';
+import pick from '../../../shared/pick';
+import { offeredCourseSectionFilterableFields } from './offeredCourseSection.constants';
 
 const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
   const result = await OfferedCourseSectionService.insertIntoDB(req.body);
@@ -16,7 +18,13 @@ const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
-  const result = await OfferedCourseSectionService.getAllFromDB();
+  const filters = pick(req.query, offeredCourseSectionFilterableFields);
+  const options = pick(req.query, ['limit', 'page', 'sortBy', 'sortOrder']);
+
+  const result = await OfferedCourseSectionService.getAllFromDB(
+    filters,
+    options
+  );
 
   sendResponse(res, {
     statusCode: httpStatus.OK,

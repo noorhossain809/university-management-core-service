@@ -1,0 +1,82 @@
+Fri Sep 15 2023 11:46:25 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Fri Sep 15 2023 11:46:41 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "Wordpress",
+    code: "CSE08",
+    credits: 4,
+    prerequisiteCourse: [
+    ~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "d74a47ff-a0e9-4a10-a432-5dc7154adaf7"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   Prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   PrerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPreRequisiteInput,
+?   faculties?: courseFacultyCreateNestedManyWithoutCourseInput,
+?   offerdCourses?: OfferdCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `prerequisiteCourse`. Available options are listed in green.
+Fri Sep 15 2023 11:47:33 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "Wordpress",
+    code: "CSE08",
+    credits: 4,
+    prerequisiteCourse: [
+    ~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "fec87340-332e-4438-8560-a1fbf17bffa8"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   Prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   PrerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPreRequisiteInput,
+?   faculties?: courseFacultyCreateNestedManyWithoutCourseInput,
+?   offerdCourses?: OfferdCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `prerequisiteCourse`. Available options are listed in green.
+Fri Sep 15 2023 11:49:52 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "Wordpress",
+    code: "CSE09",
+    credits: 4,
+    prerequisiteCourse: [
+    ~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "aef12ce3-cd41-4598-976c-3961a3191fa7"
+      },
+      {
+        courseId: "7563129d-ca4a-455d-ab1a-37018c411f21"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   Prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   PrerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPreRequisiteInput,
+?   faculties?: courseFacultyCreateNestedManyWithoutCourseInput,
+?   offerdCourses?: OfferdCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `prerequisiteCourse`. Available options are listed in green.
