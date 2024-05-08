@@ -315,18 +315,34 @@ model StudentEnrolledCourseMarks {
 }
 
 model StudentSemesterPayment {
-  id                   String           @id @default(uuid())
-  createdAt            DateTime         @default(now())
-  updatedAt            DateTime         @updatedAt()
-  studentId            String
-  student              Student          @relation(fields: [studentId], references: [id])
-  academicSemesterId   String
-  academicSemester     AcademicSemester @relation(fields: [academicSemesterId], references: [id])
-  fullPaymentAmount    Int?             @default(0)
-  partialPaymentAmount Int              @default(0)
-  totalDueAmount       Int?             @default(0)
-  totalPaidAmount      Int?             @default(0)
-  paymentStatus        PaymentStatus?   @default(PENDING)
+  id                            String                          @id @default(uuid())
+  createdAt                     DateTime                        @default(now())
+  updatedAt                     DateTime                        @updatedAt()
+  studentId                     String
+  student                       Student                         @relation(fields: [studentId], references: [id])
+  academicSemesterId            String
+  academicSemester              AcademicSemester                @relation(fields: [academicSemesterId], references: [id])
+  fullPaymentAmount             Int?                            @default(0)
+  partialPaymentAmount          Int                             @default(0)
+  totalDueAmount                Int?                            @default(0)
+  totalPaidAmount               Int?                            @default(0)
+  paymentStatus                 PaymentStatus?                  @default(PENDING)
+  studentSemesterPaymentHistory StudentSemesterPaymentHistory[]
+}
+
+model StudentSemesterPaymentHistory {
+  id                       String                 @id @default(uuid())
+  createdAt                DateTime               @default(now())
+  updatedAt                DateTime               @updatedAt()
+  studentSemesterPaymentId String
+  studentSemesterPayment   StudentSemesterPayment @relation(fields: [studentSemesterPaymentId], references: [id])
+  transactionId            String
+  paymentMethod            PaymentMethodStatus    @default(ONLINE)
+  dueAmount                Int                    @default(0)
+  paidAmount               Int                    @default(0)
+  isPaid                   Boolean?               @default(false)
+
+  @@map("student_semester_payment_histories")
 }
 
 model StudentAcademicInfo {
@@ -372,4 +388,9 @@ enum PaymentStatus {
   PENDING
   PARTIAL_PAID
   FULL_PAID
+}
+
+enum PaymentMethodStatus {
+  CASH
+  ONLINE
 }
