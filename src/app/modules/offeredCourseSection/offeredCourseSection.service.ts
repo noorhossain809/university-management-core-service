@@ -22,6 +22,7 @@ const insertIntoDB = async (
   payload: IOfferedCourseSectionCreate
 ): Promise<OfferedCourseSection | null> => {
   const { classSchedules, ...data } = payload;
+  console.log('payload', payload);
   const isExistOfferedCourse = await prisma.offerdCourse.findFirst({
     where: {
       id: data.offeredCourseId
@@ -35,9 +36,21 @@ const insertIntoDB = async (
     );
   }
 
+ 
+
   await asyncForEch(classSchedules, async (schedule: any) => {
     await OfferedCourseClassScheduleUtils.checkRoomAvailable(schedule);
     await OfferedCourseClassScheduleUtils.checkFacultyAvailable(schedule);
+
+     // Check if the facultyId exists
+  const isValidFaculty = await prisma.faculty.findUnique({
+    where: {id: schedule.facultyId}
+  })
+
+  if(!isValidFaculty){
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid faculty id')
+  }
+
   });
 
   // data.semesterRegistrationId = isExistOfferedCourse.semesterRegistrationId;

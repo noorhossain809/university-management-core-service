@@ -1,0 +1,7 @@
+Fri Jun 14 2024 17:14:45 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Fri Jun 14 2024 17:23:53 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Fri Jun 14 2024 17:57:53 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.student.findFirst()` invocation:
+
+
+Error in connector: Error querying the database: db error: FATAL: the database system is in recovery mode

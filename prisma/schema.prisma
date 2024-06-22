@@ -61,7 +61,7 @@ model AcademicDepartment {
 
 model Faculty {
   id           String   @id @default(uuid())
-  facultyId    String
+  facultyId    String   @unique
   firstName    String
   middleName   String
   lastName     String
@@ -245,7 +245,7 @@ model OfferedCourseClassSchedule {
   roomId                 String
   Room                   Room                 @relation(fields: [roomId], references: [id])
   facultyId              String
-  Faculty                Faculty              @relation(fields: [facultyId], references: [id])
+  Faculty                Faculty              @relation(fields: [facultyId], references: [facultyId])
 
   @@map("offered_course_class_schedule")
 }

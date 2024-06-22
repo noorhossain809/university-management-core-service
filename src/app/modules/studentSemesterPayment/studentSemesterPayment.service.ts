@@ -160,6 +160,8 @@ const initiatePayment = async (payload: any, user: any) => {
     },
   });
 
+  console.log("payment info", studentSemesterPayment)
+
   if (!studentSemesterPayment) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Payment information not found');
   }

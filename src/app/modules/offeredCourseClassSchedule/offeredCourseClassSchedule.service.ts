@@ -14,6 +14,7 @@ import { OfferedCourseClassScheduleUtils } from './offeredCourseClassSchedule.ut
 const insertIntoDB = async (
   data: OfferedCourseClassSchedule
 ): Promise<OfferedCourseClassSchedule> => {
+  console.log('data', data);
   await OfferedCourseClassScheduleUtils.checkRoomAvailable(data);
   await OfferedCourseClassScheduleUtils.checkFacultyAvailable(data);
 

@@ -7,6 +7,7 @@ import { StudentsController } from './students.controller';
 
 const router = express.Router();
 
+
 router.get('/', StudentsController.getAllStudents);
 router.get(
   '/my-courses',
@@ -18,12 +19,13 @@ router.get(
   auth(ENUM_USER_ROLE.STUDENT),
   StudentsController.getMyCourseSchedules
 );
+router.get('/:id', StudentsController.singleStudents);
+
 router.get(
   '/my-academic-info',
   auth(ENUM_USER_ROLE.STUDENT),
   StudentsController.getMyAcademicInfo
 );
-router.get('/:id', StudentsController.singleStudents);
 router.post('/', StudentsController.createStudents);
 router.patch(
   '/:id',

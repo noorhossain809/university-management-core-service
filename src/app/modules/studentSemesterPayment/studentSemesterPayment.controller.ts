@@ -33,7 +33,9 @@ const getMySemesterPayment = catchAsync(async(req: Request, res: Response) => {
 })
 
 const initiatePayment = catchAsync(async(req: Request, res: Response) => {
+    console.log('req', req)
        const user = (req as any).user;
+       console.log('user', user)
     const result = await StudentSemesterPaymentService.initiatePayment(req.body, user)
 
     sendResponse(res, {
